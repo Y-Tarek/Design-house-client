@@ -30,7 +30,7 @@
                         <div class="mt-4 mb-4 clearfix">
                             <nuxt-link class="forgot-pass color-blue font-14 fw-400" to="/password/email"> Forgot password? </nuxt-link>
                         </div>
-                        <base-button :loadin="form.busy"> Login</base-button>
+                        <base-button :loading="form.busy"> Login</base-button>
                         <p class="font-14 fw-400 text-center mt-4">
                             Don't have an account yet?
                             <nuxt-link class="color-blue" to="/register"> Create an account</nuxt-link>

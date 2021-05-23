@@ -12,9 +12,26 @@ const routes = [
     {path: '/verification/resend', name: 'verification.resend', component: Page('auth/verification/resend.vue')},
     {path: '/password/email', name: 'password.email', component: Page('auth/password/reset-email.vue')},
     {path: '/password/reset/:token', name: 'password.reset', component: Page('auth/password/password-reset.vue')},
-    {path: '/user/dashboard', name: 'user.dashboard', component: Page('user/dashboard.vue')},
     {path: '/upload', name: 'designs.upload', component: Page('user/designs/create')},
     {path: '/designs/:id/edit', name: 'designs.edit', component: Page('user/designs/edit')},
+    {path:'/settings',component: Page('user/settings/index.vue'), children:[
+        {path:'', redirect:{name:'settings.dashboard'} },
+        {
+            path:'dashboard',
+            name:'settings.dashboard',
+            component:Page('user/settings/dashboard.vue')
+        },
+        {
+            path:'profile',
+            name:'settings.profile',
+            component:Page('user/settings/profile.vue')
+        },
+        {
+            path:'designs',
+            name:'settings.designs',
+            component:Page('user/settings/designs.vue')
+        }
+    ]}
 ];
 
 

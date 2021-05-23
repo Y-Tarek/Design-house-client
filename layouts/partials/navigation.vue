@@ -107,14 +107,25 @@
                                     >Your Account</span
                                 >
                             </div>
-                            <a
+                             <nuxt-link
+                                to="/settings/dashboard"
+                                class="dropdown-item mt-28"
+                                href="#"
+                                title="dashboard"
+                            >
+                                <i class="fa fa-dashboard"></i>
+                                Dashboard
+                             </nuxt-link>
+
+                            <nuxt-link
+                            to="/settings/profile"
                                 class="dropdown-item mt-28"
                                 href="#"
                                 title="Profile"
                             >
                                 <i class="fa fa-user"></i>
                                 Profile
-                            </a>
+                            </nuxt-link>
                             <a class="dropdown-item" href="#" title="Setting">
                                 <i class="fa fa-cogs"></i>
                                 Setting
